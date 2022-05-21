@@ -1,0 +1,35 @@
+﻿@model mvc_ProjectCRUD.Models.EmpModel
+@{
+    ViewBag.Title = "Employee LogIn";
+}
+
+<h2 align ="center" class="text-danger">Employee LogIn</h2>
+<br/>
+<br/>
+
+
+@using (Html.BeginForm("LogIn","Employee",FormMethod.Post))
+{
+<div  align="center" class="bg-light">
+
+
+<div class="form-outline mb-4">
+<label>EmpEmail*</label>
+@Html.TextBoxFor(m=>m.EmpEmail , new {@class="form-control",@placeholder ="Email Address" ,@required ="required"})
+  
+</div>
+<div>
+    <label>Password*</label>
+    @Html.PasswordFor(m=>m.Password ,new {@class="form-control",@placeholder ="Password" ,@required ="required"})
+    </div>
+    <br/>
+
+<div align="center">
+<button type="submit" class = " btn btn-primary btn-lg "> Log In</button>
+<br/>
+
+</div>
+
+    </div>
+
+}

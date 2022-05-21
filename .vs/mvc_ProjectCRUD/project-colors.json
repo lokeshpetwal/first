@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "50a21d29-aa3c-47f1-a454-0851e539977e": {
+      "ProjectGuid": "50a21d29-aa3c-47f1-a454-0851e539977e",
+      "DisplayName": "mvc_ProjectCRUD",
+      "ColorIndex": 0
+    }
+  },
+  "NextColorIndex": 1
+}

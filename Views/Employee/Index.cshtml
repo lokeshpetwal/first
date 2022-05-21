@@ -1,0 +1,71 @@
+﻿@model mvc_ProjectCRUD.Models.EmpModel
+@{
+    ViewBag.Title = "Index";
+}
+
+
+@if( ViewBag.Update == null){
+<h1 align = "center" >Add Employee Details</h1>}
+
+else{
+<h1 align = "center" >Update Employee Details</h1>
+}
+
+
+
+
+@using (Html.BeginForm("Index","Employee",FormMethod.Post))
+{
+<div  align="center" class="bg-primary">
+
+<div class ="form-group" >
+
+    @Html.HiddenFor(m=>m.EmpId)
+
+<label>EmpnName :</label>
+@Html.TextBoxFor(m=>m.EmpName , new {@class="form-control",@placeholder ="Name" ,@required ="required"})
+   
+</div>
+<div class ="form-group">
+<label>EmpEmail :</label>
+@Html.TextBoxFor(m=>m.EmpEmail , new {@class="form-control",@placeholder ="EmpEmail" ,@required ="required"})
+  
+</div>
+
+<div class ="form-group">
+<label>EmpMobile :</label>
+@Html.TextBoxFor(m=>m.EmpMobile , new {@class="form-control",@placeholder ="EmpMobile" ,@required ="required"})
+
+</div>
+
+<div class ="form-group">
+<label>EmpAddress :</label>
+@Html.TextBoxFor(m=>m.EmpAddress , new {@class="form-control",@placeholder ="EmpAddress" ,@required ="required"})
+
+</div>
+
+<div class ="form-group">
+<label>DOB :</label>
+@Html.TextBoxFor(m=>m.DOB , new {@class="form-control",@placeholder ="DOB" ,@required ="required"})
+
+</div>
+
+<div align="center">
+    @if(ViewBag.Edit=="edit")
+   {
+<button type="submit" class = " btn btn-success">  Update </button>
+    
+    }
+    else
+  {
+<button type="submit" class = " btn btn-success">  Submit</button>
+    }
+
+
+<button type="reset" class = " btn btn-danger">  Reset</button>
+    <br/>
+    <br/>
+
+</div>
+    </div>
+}
